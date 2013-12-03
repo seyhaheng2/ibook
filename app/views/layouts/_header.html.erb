@@ -15,6 +15,7 @@
         </ul>
         <ul class="nav navbar-nav pull-right">
           <% if user_signed_in? %>
+            <%= menu_item '<i class="glyphicon-plus"></i> Add'.html_safe, new_pin_path %>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <% else %>
             <%= menu_item "Login", new_user_session_path %>
